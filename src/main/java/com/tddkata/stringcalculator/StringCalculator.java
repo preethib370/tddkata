@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringCalculator {
+	String input = "1";
+
 	public static int add(String input) {
 		int result = 0;
 		List<Integer> negativeNum = new ArrayList<Integer>();
@@ -28,6 +30,7 @@ public class StringCalculator {
 		if (negativeNum.size() != 0) {
 			throw new RuntimeException("Negatives not allowed: " + negativeNum.toString());
 		}
+		System.out.println(result);
 		return result;
 	}
 }
