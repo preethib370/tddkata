@@ -21,4 +21,9 @@ public class StringCalculatorTest {
 		assertEquals(3, StringCalculator.add("1,2"));
 	}
 
+	@Test(expected = RuntimeException.class)
+	public void testNotANumberThrowsException() {
+		StringCalculator.add("A,B");
+	}
+
 }
