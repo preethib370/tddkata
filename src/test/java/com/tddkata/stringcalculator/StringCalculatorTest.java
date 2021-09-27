@@ -40,4 +40,20 @@ public class StringCalculatorTest {
 	public void testSemicolonDelimiterToSeparateNumbers() {
 		assertEquals(3, StringCalculator.add("//;\n1;2"));
 	}
+
+	@Test(expected = RuntimeException.class)
+	public void testNegativeNumberInString() {
+		StringCalculator.add("1,2,-3");
+	}
+
+	@Test
+	public void testMultipleNegativeNumbers() {
+		String msg = "";
+		try {
+			StringCalculator.add("1,2,3,-4,5,-6");
+		} catch (RuntimeException e) {
+			msg = e.getMessage();
+		}
+		assertEquals("Negatives not allowed: [-4, -6]", msg);
+	}
 }
