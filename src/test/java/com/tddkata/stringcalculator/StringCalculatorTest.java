@@ -12,7 +12,7 @@ public class StringCalculatorTest {
 	}
 
 	@Test
-	public void testOneNumberReturnSameNumber() {
+	public void testOneNumbr42erReturnSameNumber() {
 		assertEquals(1, StringCalculator.add("1"));
 	}
 
@@ -55,5 +55,11 @@ public class StringCalculatorTest {
 			msg = e.getMessage();
 		}
 		assertEquals("Negatives not allowed: [-4, -6]", msg);
+	}
+
+	@Test
+	public void testIgnoreNumbergreaterthanthousand() {
+		assertEquals(1001, StringCalculator.add("1,1000,1001"));
+
 	}
 }
