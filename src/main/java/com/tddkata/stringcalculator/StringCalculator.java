@@ -30,7 +30,6 @@ public class StringCalculator {
 		if (negativeNum.size() != 0) {
 			throw new RuntimeException("Negatives not allowed: " + negativeNum.toString());
 		}
-		System.out.println(result);
 		return result;
 	}
 }
