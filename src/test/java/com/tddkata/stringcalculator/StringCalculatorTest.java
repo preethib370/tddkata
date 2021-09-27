@@ -30,4 +30,9 @@ public class StringCalculatorTest {
 	public void testMultipleNumberReturnSum() {
 		assertEquals(45, StringCalculator.add("1,2,3,4,5,6,7,8,9"));
 	}
+
+	@Test
+	public void testAllowNewLineBetweenNumber() {
+		assertEquals(6, StringCalculator.add("1\n2,3"));
+	}
 }
