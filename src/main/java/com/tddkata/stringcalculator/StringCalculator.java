@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringCalculator {
-	public int add(String input) {
+	public static int add(String input) {
 		int result = 0;
 		List<Integer> negativeNum = new ArrayList<Integer>();
 		String temp = input;
